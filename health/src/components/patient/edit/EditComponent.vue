@@ -196,7 +196,6 @@ export default {
 
 	watch: {
 		isUpdating: function() {
-			console.log('--> watch', this.isUpdating, this.updatedData);
 			if(!this.isUpdating && this.updatedData !== null) {
 				this.$swal.fire({
 					text: "Success, Data has been updated successfully !",

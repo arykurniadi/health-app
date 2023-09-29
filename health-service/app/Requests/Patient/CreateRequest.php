@@ -87,10 +87,10 @@ class CreateRequest extends Validation
         $this->add(
             'phone',
             new Regex([
-                'pattern' => '/^\d{10}$/',
-                'message' => 'Invalid phone number format',
+                'pattern' => '/^\d{7,10}$/',
+                'message' => 'Invalid phone number format (must be between 7 and 10 digits)',
             ])
-        );
+        );        
     }    
 
     public function validate($data = null, $entity = null)
